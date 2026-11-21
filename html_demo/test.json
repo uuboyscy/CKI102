@@ -1,0 +1,8 @@
+{
+    // <input type="hidden" name="from" value="/bbs/Gossiping/index.html">
+    // name="from" and value="/bbs/Gossiping/index.html"
+    "from": "/bbs/Gossiping/index.html",
+    //<button class="btn-big" type="submit" name="yes" value="yes">我同意，我已年滿十八歲<br><small>進入</small></button>
+    // name="yes" and value="yes"
+    "yes": "yes"
+}
