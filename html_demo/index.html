@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My First Webpage</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Hello, World!</h1>
+    <p>This is my first paragraph.</p>
+
+    <h2>Team List</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+      <tr>
+        <td>Alex</td>
+        <td>Developer</td>
+      </tr>
+      <tr>
+        <td>Sam</td>
+        <td>Designer</td>
+      </tr>
+    </table>
+
+    <h2>Join the Team</h2>
+
+    <!-- Start of the form -->
+    <!-- action: where the data goes | method: how it is sent -->
+    <form action="https://uuboyscy.dev" method="POST">
+      
+      <!-- Text input for Name -->
+      <label for="userName">Name:</label><br>
+      <!-- The attribute "name" is a very important item to name a value that server receive -->
+      <input type="text" id="userName" name="userName" placeholder="Type your name" required><br><br>
+
+      <!-- Text input for Role -->
+      <label for="userRole">Role:</label><br>
+      <input type="text" id="userRole" name="userRole" placeholder="e.g., Developer"><br><br>
+
+      <!-- Longer text box for a message -->
+      <label for="userBio">Short Bio:</label><br>
+      <textarea id="userBio" name="userBio" rows="3" cols="25" placeholder="Tell us about yourself"></textarea><br><br>
+
+      <!-- Submit button sends the form -->
+      <button type="submit">Submit</button>
+
+    </form>
+    <!-- End of the form -->
+
+  </body>
+</html>
