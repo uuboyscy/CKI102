@@ -31,4 +31,18 @@
 - 認識 `<head>` 與 `<body>`、圖片 `<img src="…">`、表格 `<table>`、`<thead>`、`<tbody>`、`<tr>` 和 `<th>`。
 - 用 VS Code 開啟單一練習資料夾；實際執行程式時仍應確認終端機的工作目錄與 Python 環境設定。
 
+#### 11:02:13｜HTML 表格、表單與 AI 協作
+
+來源：`tibame cki102 transcript-2026-11-21 03.md`；主要逐字稿最後時間戳為 00:57:44，附錄會議筆記另含 00:40:08 時間戳。原始逐字稿保留語音辨識雜訊。
+
+- 在 VS Code 建立 `index.html`，使用 AI 協助產生基本 HTML 結構，再逐步加入表格與 CSS。課堂範例見 [`html_demo/index.html`](html_demo/index.html)。
+- 表單用 `<form>`、`<input>` 與按鈕收集資料；`action` 指定送出目標，`method` 指定方法。通常具備 `name` 的表單欄位才會以名稱和值送出；後端如何接收留待 Flask 課程。
+- HTML 表單使用 GET 時，欄位通常會放進 URL 的 query string；POST 通常放在 request body。POST 並不自動加密，敏感資料仍需 HTTPS 與適當保護。
+- `label for` 可關聯對應的 input，不僅方便點擊，也有助輔助科技辨識；`placeholder` 提示文字不能取代標籤。
+- 透過手動貼上、修改和檢視 HTML，理解 coding agent 可協助產生、局部修改與驗證檔案；實際結果仍需人工檢查。
+- Git 可保留版本、協助人與 AI 協作；多人或多 Agent 修改同一 repo 時，先確認工作樹並同步最新版本。
+- 下個主題預告：透過開發者工具觀察 HTTP 請求、回應、headers 與 cookies／session。HTTP 本身無狀態；session 可以透過 cookie 等機制關聯請求。
+
+> 安全補充：VS Code Workspace Trust 可限制部分工作區功能，但不是完整沙箱；檢查不明專案前應先避免執行程式與啟用不受信任的擴充功能。AI 掃描與雲端編輯器都不能保證安全，也可能涉及資料外傳與隱私風險。
+>
 > 使用爬蟲時應確認網站授權、服務條款、隱私與合理請求頻率；AI 產生的程式與正規表達式仍需測試驗證。
