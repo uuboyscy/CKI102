@@ -43,6 +43,18 @@
 - Git 可保留版本、協助人與 AI 協作；多人或多 Agent 修改同一 repo 時，先確認工作樹並同步最新版本。
 - 下個主題預告：透過開發者工具觀察 HTTP 請求、回應、headers 與 cookies／session。HTTP 本身無狀態；session 可以透過 cookie 等機制關聯請求。
 
+#### 13:30:20｜Network、HTTP 與網址參數
+
+來源：`tibame cki102 transcript-2026-11-21 04.md`；最後時間戳為 00:50:01。原始逐字稿含語音辨識雜訊。
+
+- 瀏覽器開發者工具中，Elements 用於觀察頁面 DOM；Network 用於檢視請求與回應，可重新整理頁面來觀察載入的文件與 CSS 等資源。
+- 查看 Request URL、Request Method、Status Code、Request／Response Headers、Response 與 Payload。Response 是伺服器的回應內容；Elements 顯示目前 DOM，可能已受 JavaScript 修改，兩者不一定相同。
+- 常見狀態碼：2xx 通常表示成功；3xx 表示重新導向等狀態；400 為錯誤請求、401 通常需要認證、403 表示禁止存取、404 表示資源未找到、429 表示請求過多。
+- URL 可拆成 scheme、host、path、query 和 fragment；query 常用 `?` 開始、以 `&` 分隔參數。路徑不一定對應伺服器上的實際檔案；fragment 通常不會傳給伺服器。
+- HTTPS 使用 TLS 保護傳輸；憑證可有免費選項，仍須妥善設定與驗證。User-Agent 是客戶端描述，不是身分驗證；不一定需要手動設定。
+- Cookies 可承載狀態或識別資訊，應視為可能敏感，不要公開或硬編碼登入 cookie。清除 cookies 可能中斷部分追蹤或登入，但不能保證完全防追蹤；資料收集應遵守授權、隱私與適用規範。
+- 課堂以搜尋關鍵字與時間篩選示範觀察 query parameters；實際參數、搜尋結果及服務限制可能改變，不應將搜尋排序直接視為搜尋量或人氣的證據。
+
 > 安全補充：VS Code Workspace Trust 可限制部分工作區功能，但不是完整沙箱；檢查不明專案前應先避免執行程式與啟用不受信任的擴充功能。AI 掃描與雲端編輯器都不能保證安全，也可能涉及資料外傳與隱私風險。
 >
 > 使用爬蟲時應確認網站授權、服務條款、隱私與合理請求頻率；AI 產生的程式與正規表達式仍需測試驗證。
